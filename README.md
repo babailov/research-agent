@@ -44,18 +44,21 @@ cd research-agent
 npm install
 npm run build
 
+# Link the CLI globally
+npm link
+
 # Launch the interactive research agent
-claude
+research
 ```
 
-That's it. The `CLAUDE.md` in the repo root turns Claude Code into a research specialist automatically.
+That's it. The `research` command launches Claude Code with the `CLAUDE.md` instructions, turning it into a research specialist automatically.
 
 ## Usage
 
 ### Interactive mode (recommended)
 
 ```bash
-claude
+research
 ```
 
 Opens an interactive Claude Code session with full research capabilities. Just talk to it:
@@ -79,7 +82,7 @@ research ask "What are the main approaches to agent memory?"
 research list
 ```
 
-> The CLI spawns Claude Code in print mode. For the full experience (knowledge extraction, follow-up questions, maintenance), use interactive mode.
+> `research add` and `research ask` spawn Claude Code in print mode. For the full experience (knowledge extraction, follow-up questions, maintenance), use `research` with no arguments for interactive mode.
 
 ## Workflows
 
