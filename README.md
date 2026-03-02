@@ -113,6 +113,8 @@ The knowledge layer builds itself during ingestion. Four note types:
 
 Each note tracks `sources`, `last_reinforced`, `times_cited`, `confidence`, and `status` in YAML frontmatter.
 
+The knowledge layer isn't limited to article synthesis. Any codified preference or process can live here — for example, a writing style guide with tone rules, structure conventions, and a mandatory BS score becomes a knowledge note that the agent references whenever you ask it to draft something.
+
 ### Research queries
 
 Ask a question and the agent will:
@@ -193,13 +195,15 @@ Tags are a controlled vocabulary — lowercase, hyphenated (e.g., `ai-agents`, `
 
 Create a new domain map when 3+ articles cluster around a theme not covered by existing maps. The agent will suggest this during ingestion.
 
+### Storing preferences in the knowledge layer
+
+Any codified preference — writing style, review checklists, decision frameworks — can be stored as a knowledge note rather than relying on Claude Code's auto-memory (`~/.claude/projects/...`). This makes preferences version-controlled, portable, and discoverable through the normal progressive disclosure funnel.
+
+Example: a writing style guide stored as `knowledge/writing style — honest business prose with mandatory BS scoring.md` with `type: insight` and `domains: [personal-development]` will be found whenever you ask the agent to draft a post.
+
 ### Auto-memory
 
-Claude Code persists learned preferences across sessions in `~/.claude/projects/<path>/memory/`. Useful memory files to seed:
-
-- `MEMORY.md` — project patterns, user preferences
-- `post-writing-style.md` — if you use the agent for writing drafts
-- `system-cross-reference.md` — if you have other systems to compare articles against
+Claude Code also persists learned preferences across sessions in `~/.claude/projects/<path>/memory/`. This is useful for transient preferences, but for anything durable, store it in `knowledge/` instead — it travels with the repo and survives machine changes.
 
 ## Project structure
 
