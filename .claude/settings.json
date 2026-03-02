@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Read",
+      "Glob",
+      "Grep",
+      "Write(articles/*)",
+      "Write(articles/**)",
+      "Edit(articles/*)",
+      "Edit(articles/**)"
+    ]
+  }
+}

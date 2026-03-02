@@ -1,0 +1,29 @@
+{
+  "name": "research-agent",
+  "version": "1.0.0",
+  "description": "AI-powered research article tracker and knowledge assistant built on Claude Code",
+  "type": "module",
+  "bin": {
+    "research": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "claude",
+    "research",
+    "knowledge-management",
+    "ai-agent",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
